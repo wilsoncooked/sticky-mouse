@@ -4,7 +4,14 @@ class Name extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {x: 0, y: 0};
+    this.state = {
+      x: 0,
+      y: 0,
+      height: 0,
+      width: 0,
+      xWalk: 0,
+      yWalk: 0,
+    };
     this.onMouseMove = this.onMouseMove.bind(this);
   }
 
@@ -31,7 +38,7 @@ class Name extends React.Component {
   }
   render() {
     const styles = {
-      sarah: {
+      trippy: {
         textShadow: `${this.state.xWalk * -1}px ${
           this.state.yWalk
         }px 0px hotpink,
@@ -45,9 +52,7 @@ class Name extends React.Component {
     console.log(this.state);
     return (
       <div className='wrapper' onMouseMove={this.onMouseMove}>
-        <h1 name='sarah' style={styles.sarah}>
-          Sarah!!!
-        </h1>
+        <h1 style={styles.trippy}>trippy!!!</h1>
       </div>
     );
   }
